@@ -9,7 +9,7 @@
 
 int main() {
     double num_1, num_2, result; 
-    int sim
+    int sim;
     char simbol;
 
     do {
