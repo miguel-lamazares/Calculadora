@@ -1,8 +1,8 @@
-// Criado por Miguel Lamazares em 29/04/2025
+// Created by Miguel Lamazares on 04/29/2025
 
-/* IMPORTANDO BIBLIOTECAS NECESSÁRIAS
-    1- stdio.h: Para funções de entrada e saída
-    2- math.h: Para funções matemáticas
+/* IMPORTING REQUIRED LIBRARIES
+1- stdio.h: For input and output functions
+2- math.h: For mathematical functions
 */
 #include <stdio.h>
 #include <math.h>
@@ -14,14 +14,14 @@ int main() {
 
     do {
         // Entradas
-        printf("caso queira um numero com casas decimais usar o '.'\nDigite o primeiro número: ");
+        printf("if you want a number with decimal places use '.'\nEnter the first number: ");
         scanf("%lf", &num_1);
 
-        printf("Qual operação deseja realizar? (+, -, /, *, ^ ou $)\n+ = Adicao\n- = Subtracao\n* = Multiplicacao\n/ = Divisao\n^ = Potenciacao\n$ = Raiz Quadrada\n");
+        printf("What operation do you want to perform? (+, -, /, *, ^ or $)\n+ = Addition\n- = Subtraction\n* = Multiplication\n/ = Division\n^ = Power\n$ = Square Root\n");
         scanf(" %c", &simbol);  
 
         if (simbol != '$') {
-            printf("Digite o segundo número: ");
+            printf("Enter the second number: ");
             scanf("%lf", &num_2);
         }
 
@@ -31,38 +31,38 @@ int main() {
             // ADIÇÃO
             case '+':
                 result = num_1 + num_2;
-                printf("Resultado: %.2lf\n", result);
+                printf("Result: %.2lf\n", result);
                 break;
             
             
                 // SUBTRAÇÃO
             case '-':
                 result = num_1 - num_2;
-                printf("Resultado: %.2lf\n", result);
+                printf("Result: %.2lf\n", result);
                 break;
             
             
                 // MULTIPLICAÇÃO
             case '*':
                 result = num_1 * num_2;
-                printf("Resultado: %.2lf\n", result);
+                printf("Result: %.2lf\n", result);
                 break;
             
             
                 // POTENCIACIACÃO
             case '^':
                 result = pow(num_1, num_2);
-                printf("Resultado: %.2lf\n", result);
+                printf("Result: %.2lf\n", result);
                 break;
             
             
                 // DIVISÃO
             case '/':
                 if (num_2 == 0) {
-                    printf("Erro: Não é possível dividir por zero.\n");
+                    printf("Error: Cannot divide by zero.\n");
                 } else {
                     result = num_1 / num_2;
-                    printf("Resultado: %.2lf\n", result);
+                    printf("Result: %.2lf\n", result);
                 }
                 break;
           
@@ -71,19 +71,19 @@ int main() {
                 // RAIZ QUADRADA
             case '$':
                 if (num_1 < 0) {
-                    printf("Erro: Não é possível calcular a raiz quadrada de um número negativo.\n");
+                    printf("Error: Cannot calculate the square root of a negative number.\n");
                 } else {
                     result = sqrt(num_1);
-                    printf("Resultado: %.2lf\n", result);
+                    printf("Result: %.2lf\n", result);
                 }
                 break;
             default:
-                printf("Operação inválida.\n");
+                printf("Invalid operation.\n");
                 break;
         }
 
         // Perguntar se deseja continuar
-        printf("Obrigado por usar a calculadora!\nDeseja realizar outra operação? \n(1 para sim, 0 para não): ");
+        printf("Thank you for using the calculator!\nDo you want to perform another operation?\n(1 for yes, 0 for no): ");
         scanf(" %d", &sim);
     } while (sim == 1);
     return 0;
