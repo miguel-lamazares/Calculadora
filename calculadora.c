@@ -17,10 +17,10 @@ int main() {
         printf("Digite o primeiro número: ");
         scanf("%lf", &num_1);
 
-        printf("Qual operação deseja realizar? (+, -, /, *, ^ ou √)\n");
+        printf("Qual operação deseja realizar? (+, -, /, *, ^ ou $)\n+ = Adicao\n- = Subtracao\n* = Multiplicacao\n/ = Divisao\n^ = Potenciacao\n$ = Raiz Quadrada\n");
         scanf(" %c", &simbol);  // Adicionando espaço para ignorar o \n no buffer
 
-        if (sim != '√') {
+        if (simbol != '$') {
             printf("Digite o segundo número: ");
             scanf("%lf", &num_2);
         }
@@ -69,7 +69,7 @@ int main() {
             
             
                 // RAIZ QUADRADA
-            case '√':
+            case '$':
                 if (num_1 < 0) {
                     printf("Erro: Não é possível calcular a raiz quadrada de um número negativo.\n");
                 } else {
