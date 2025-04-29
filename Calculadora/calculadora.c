@@ -83,10 +83,8 @@ int main() {
         }
 
         // Perguntar se deseja continuar
-        printf("Deseja realizar outra operação? (1 para sim, 0 para não): ");
-        scanf("%d", &sim);
+        printf("Obrigado por usar a calculadora!\nDeseja realizar outra operação? \n(1 para sim, 0 para não): ");
+        scanf(" %d", &sim);
     } while (sim == 1);
-
-    printf("Obrigado por usar a calculadora!\n");
     return 0;
 }
