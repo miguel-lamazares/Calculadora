@@ -1,11 +1,91 @@
-// Criado por Miguel em 29/04/2025.
+// Criado por Miguel Lamazares em 29/04/2025
 
-// importando as bibliotecas 1- estrada e saida de dados 2- biblioteca de funções matemáticas
+/* IMPORTANDO BIBLIOTECAS NECESSÁRIAS
+    1- stdio.h: Para funções de entrada e saída
+    2- math.h: Para funções matemáticas
+*/
 #include <stdio.h>
 #include <math.h>
 
-int main(){
+int main() {
+    double num_1, num_2, result; // Usar double para resultados precisos
+    char sim;
 
+    do {
+        // Entradas
+        printf("Digite o primeiro número: ");
+        scanf("%lf", &num_1);
 
+        printf("Qual operação deseja realizar? (+, -, /, *, ^ ou √)\n");
+        scanf(" %c", &sim);  // Adicionando espaço para ignorar o \n no buffer
 
+        if (sim != '√') {
+            printf("Digite o segundo número: ");
+            scanf("%lf", &num_2);
+        }
+
+        // Operações
+        switch (sim) {
+           
+            // ADIÇÃO
+            case '+':
+                result = num_1 + num_2;
+                printf("Resultado: %.2lf\n", result);
+                break;
+            
+            
+                // SUBTRAÇÃO
+            case '-':
+                result = num_1 - num_2;
+                printf("Resultado: %.2lf\n", result);
+                break;
+            
+            
+                // MULTIPLICAÇÃO
+            case '*':
+                result = num_1 * num_2;
+                printf("Resultado: %.2lf\n", result);
+                break;
+            
+            
+                // POTENCIACIACÃO
+            case '^':
+                result = pow(num_1, num_2);
+                printf("Resultado: %.2lf\n", result);
+                break;
+            
+            
+                // DIVISÃO
+            case '/':
+                if (num_2 == 0) {
+                    printf("Erro: Não é possível dividir por zero.\n");
+                } else {
+                    result = num_1 / num_2;
+                    printf("Resultado: %.2lf\n", result);
+                }
+                break;
+          
+            
+            
+                // RAIZ QUADRADA
+            case '√':
+                if (num_1 < 0) {
+                    printf("Erro: Não é possível calcular a raiz quadrada de um número negativo.\n");
+                } else {
+                    result = sqrt(num_1);
+                    printf("Resultado: %.2lf\n", result);
+                }
+                break;
+            default:
+                printf("Operação inválida.\n");
+                break;
+        }
+
+        // Perguntar se deseja continuar
+        printf("Deseja realizar outra operação? (1 para sim, 0 para não): ");
+        scanf("%d", &sim);
+    } while (sim == 1);
+
+    printf("Obrigado por usar a calculadora!\n");
+    return 0;
 }
