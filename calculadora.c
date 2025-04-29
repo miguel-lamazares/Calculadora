@@ -8,8 +8,9 @@
 #include <math.h>
 
 int main() {
-    double num_1, num_2, result; // Usar double para resultados precisos
-    char sim;
+    double num_1, num_2, result; 
+    int sim
+    char simbol;
 
     do {
         // Entradas
@@ -17,7 +18,7 @@ int main() {
         scanf("%lf", &num_1);
 
         printf("Qual operação deseja realizar? (+, -, /, *, ^ ou √)\n");
-        scanf(" %c", &sim);  // Adicionando espaço para ignorar o \n no buffer
+        scanf(" %c", &simbol);  // Adicionando espaço para ignorar o \n no buffer
 
         if (sim != '√') {
             printf("Digite o segundo número: ");
@@ -25,7 +26,7 @@ int main() {
         }
 
         // Operações
-        switch (sim) {
+        switch (simbol) {
            
             // ADIÇÃO
             case '+':
