@@ -14,11 +14,11 @@ int main() {
 
     do {
         // Entradas
-        printf("Digite o primeiro número: ");
+        printf("caso queira um numero com casas decimais usar o '.'\nDigite o primeiro número: ");
         scanf("%lf", &num_1);
 
         printf("Qual operação deseja realizar? (+, -, /, *, ^ ou $)\n+ = Adicao\n- = Subtracao\n* = Multiplicacao\n/ = Divisao\n^ = Potenciacao\n$ = Raiz Quadrada\n");
-        scanf(" %c", &simbol);  // Adicionando espaço para ignorar o \n no buffer
+        scanf(" %c", &simbol);  
 
         if (simbol != '$') {
             printf("Digite o segundo número: ");
