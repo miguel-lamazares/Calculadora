@@ -83,7 +83,7 @@ int main() {
         }
 
         // Perguntar se deseja continuar
-        printf("Thank you for using the calculator!\nDo you want to perform another operation?\n(1 for yes, 0 for no): ");
+        printf("\nThank you for using the calculator!\n\nDo you want to perform another operation?\n(1 for yes, 0 for no): ");
         scanf(" %d", &sim);
     } while (sim == 1);
     return 0;
