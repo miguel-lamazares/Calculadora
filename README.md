@@ -27,7 +27,7 @@ This is a console-based calculator developed in C, capable of performing basic a
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Dexzn08/NOME_DO_REPO.git
+git clone https://github.com/miguel-lamazares/Calculator.git
 ```
 2. Compile the program:
 
