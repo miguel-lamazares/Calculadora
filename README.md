@@ -34,26 +34,13 @@ git clone https://github.com/Dexzn08/NOME_DO_REPO.git
 ```bash
 gcc -o calculator calculator.c -lm
 ```
-####-lm links the math library (required for pow() and sqrt())
+#### lm links the math library (required for pow() and sqrt())
 
 3. Run the program:
 
 ```bash
 ./calculator
 ```
-##🧾 Example Output
-
-Enter the first number: 9
-What operation do you want to perform? (+, -, /, *, ^ or $)
-+ = Addition
-- = Subtraction
-* = Multiplication
-/ = Division
-^ = Power
-$ = Square Root
-+
-Enter the second number: 3
-Result: 12.00
 
 # 📫 Contact
 - GitHub: github.com/miguel-lamazares
